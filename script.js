@@ -83,4 +83,51 @@
         // Employee Delete Logic - END
     });
     // Select Employee Logic - END
-})
+
+    // Render All Employees Logic - START
+    const renderEmployees = () => {
+        employeeList.innerHTML = "";
+        employees.forEach((emp) => {
+            const employee = document.createElement("span");
+            employee.classList.add(
+                "employee__names--item"
+            );
+            if (
+                parseInt(selectedEmployeeId, 10) === emp.id
+            ) {
+                employee.classList.add("selected");
+                selectedEmployee = emp;
+            }
+            employee.setAttribute("id", emp.id);
+            employee.innerHTML = `${emp.firstName} ${emp.lastName}
+                <i class="employeeDelete">&#10060;</i>`;
+                employeeList.append(employee);
+        });
+    };
+    // Render All Employees Logic - END
+
+    // Render Single Employee Logic - START
+    const renderSingleEmployee = () => {
+        // Employee Delete Logic - START
+        if (selectedEmployeeId === -1) {
+            employeeInfo.innerHTML = "";
+            return;
+        }
+        // Employee Delete Logic - END
+
+        employeeInfo.innerHTML = `
+        <img src="${selectedEmployee.imageUrl}" />
+        <span class="employees__single--heading">
+        ${selectedEmployee.firstName} ${selectedEmployee.lastName}
+        (${selectedEmployee.age})
+        </span>
+        <span>${selectedEmployee.address}</span>
+        <span>Mobile - ${selectedEmployee.contactNumber}</span>
+        <span>DOB - ${selectedEmployee.dob}</span>
+        `;
+    };
+    // Render Single Employee Logic - END
+
+    renderEmployees();
+    if (selectedEmployee) renderSingleEmployee();
+})();
