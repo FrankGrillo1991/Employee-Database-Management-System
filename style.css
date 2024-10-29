@@ -38,3 +38,7 @@ body {
     overflow-y: scroll;
     height: 450px;
 }
+
+.employees__names {
+    width: 30%;
+}
