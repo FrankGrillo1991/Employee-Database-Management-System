@@ -32,3 +32,9 @@ body {
 .employees {
     display: flex;
 }
+
+.employees > div {
+    border: 1px solid black;
+    overflow-y: scroll;
+    height: 450px;
+}
