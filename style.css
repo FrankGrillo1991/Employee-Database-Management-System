@@ -53,3 +53,12 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.employees__names--title,
+.employees__single--title {
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+/* Initial Structural CSS - END */
