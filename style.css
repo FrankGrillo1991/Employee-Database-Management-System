@@ -42,3 +42,7 @@ body {
 .employees__names {
     width: 30%;
 }
+
+.employees__single {
+    width: 70%;
+}
