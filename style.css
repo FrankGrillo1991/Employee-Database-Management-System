@@ -28,3 +28,7 @@ body {
 .header > button:hover {
     background-color: var(--btn-hover);
 }
+
+.employees {
+    display: flex;
+}
