@@ -46,3 +46,10 @@ body {
 .employees__single {
     width: 70%;
 }
+
+.employees__names,
+.employees__single {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
