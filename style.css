@@ -62,3 +62,9 @@ body {
     border-bottom: 1px solid black;
 }
 /* Initial Structural CSS - END */
+
+/* Render all Employees - START */
+.employees__names--list {
+    display: flex;
+    flex-direction: column;
+}
